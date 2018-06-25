@@ -1,15 +1,18 @@
 {
   "name": "puppeteer-schematic",
-  "version": "0.0.0",
-  "description": "A schematics",
+  "version": "0.0.3",
+  "description": "An Angular Schematic to add Chrome Headless instead of PhantomJS",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine **/*_spec.js"
   },
   "keywords": [
-    "schematics"
+    "schematics",
+    "angular",
+    "puppeteer",
+    "chrome"
   ],
-  "author": "",
+  "author": "Matt Martz <matt.martz@gmail.com>",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
