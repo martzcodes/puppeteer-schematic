@@ -1,4 +1,4 @@
-var puppeteer = require("puppeteer");
+var puppeteer = require('puppeteer');
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
@@ -9,7 +9,7 @@ exports.config = {
   specs: ["./src/**/*.e2e-spec.ts"],
   capabilities: {
     browserName: "chrome"
-  },
+  , chromeOptions: {args: ['--headless', '--no-sandbox', '--disable-dev-shm-usage'], binary: puppeteer.executablePath()}},
   directConnect: true,
   baseUrl: "http://localhost:4200/",
   framework: "jasmine",
@@ -25,9 +25,5 @@ exports.config = {
     jasmine
       .getEnv()
       .addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
-  },
-  chromeOptions: {
-    args: ["--headless", "--no-sandbox", "--disable-dev-shm-usage"],
-    binary: puppeteer.executablePath()
   }
 };
